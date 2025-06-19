@@ -5,6 +5,8 @@
 This is a website we've been working on for a couple of months now and it is still in development.</br>
 Its only purpose is to make the handing over of vehicles easier.<br>
 
+A new, more professional design is available in `index_v2.html`. It uses Bootstrap 5 for a cleaner layout and can be opened alongside the original version.
+
 ![alt text](demo_pics/websiteinuse.png)
 
 So how do I use this website you might ask yourself.<br>
