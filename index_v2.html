@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flaschenpost-Bulli Fahrzeugrückgabe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style_v2.css">
+    <link rel="icon" href="https://www.wirsindflaschenpost.de/images/navigation/logo.png">
+    <script src="js/vector.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sketch.js"></script>
+</head>
+<body onload="_prelaod()">
+    <div id="customAlert"></div>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Flaschenpost-Bulli Fahrzeugrückgabe</span>
+            <div class="d-flex align-items-center">
+                <select class="form-select me-2" id="tools">
+                    <option value="1" id="tool1">Kleiner Schaden</option>
+                    <option value="2" id="tool2">Kratzer</option>
+                    <option value="3" id="tool3">Großflächiger Schaden</option>
+                </select>
+                <input class="form-control" type="number" value="70" min="5" step="1" disabled="true" id="ellipseD">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 mb-3">
+                <p class="fw-bold text-center">Klicke auf die Positionen der Schäden am Flaschenpost-Bulli</p>
+                <div id="imageAndCanvas" class="position-relative">
+                    <img src="assets/bully.png" id="bullyImage" class="img-fluid bully" />
+                </div>
+            </div>
+            <div class="col-md-5">
+                <table id="dataOutput" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Element ID</th>
+                            <th>Element Typ</th>
+                            <th>Beschreibung</th>
+                            <th>Löschen</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <strong>Fahrzeug Upload</strong>
+            </div>
+            <div class="card-body">
+                <div class="row gy-2">
+                    <div class="col-md-4">
+                        <a id="dwnlBTN" class="btn btn-primary w-100">Klicke hier zum Speichern</a>
+                    </div>
+                    <div class="col-md-4">
+                        <input id="uploadForm" type="file" name="files[]" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <a id="addBTN" class="btn btn-secondary w-100">Neues Fahrzeug hinzufügen</a>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <select id="drop" class="form-select">
+                            <option value="1">Fahrzeug 1</option>
+                            <option value="2">Fahrzeug 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
